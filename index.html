@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <!-- Vue app -->
+        <div id="games-app">
+            <vue-nav></vue-nav>
+            <div class="row">
+                <vue-card v-for="c in cards" :card="c" :key="c.id"></vue-card>
+            </div>
+            <vue-footer class='footer'></vue-footer>
+        </div>
+
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
