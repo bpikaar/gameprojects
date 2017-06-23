@@ -25,7 +25,7 @@ Vue.component('vue-card', {
                       {{ card.text }}
                     </div>
                     <div class="card-action">
-                      <a :href="card.url">{{ card.title }}</a>
+                      <a :href="card.url" target="_blank">{{ card.title }}</a>
                     </div>
                 </div>
             </div>`,
