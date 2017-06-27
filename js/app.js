@@ -22,7 +22,7 @@ Vue.component('vue-card', {
                       <img :src="'images/' + card.image">
                     </div>
                     <div class="card-content">
-                      {{ card.text }}
+                      {{ card.creator }}
                     </div>
                     <div class="card-action">
                       <a :href="card.link" target="_blank">{{ card.title }}</a>
