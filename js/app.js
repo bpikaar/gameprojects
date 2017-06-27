@@ -19,13 +19,13 @@ Vue.component('vue-card', {
   template: `<div class="col s12 m6 l3">
                 <div class="card small">
                     <div class="card-image">
-                      <img :src="card.image">
+                      <img :src="'images/' + card.image">
                     </div>
                     <div class="card-content">
                       {{ card.text }}
                     </div>
                     <div class="card-action">
-                      <a :href="card.url" target="_blank">{{ card.title }}</a>
+                      <a :href="card.link" target="_blank">{{ card.title }}</a>
                     </div>
                 </div>
             </div>`,
@@ -47,7 +47,7 @@ var app = new Vue({
   },
   mounted: function () {
     // games laden met fetch. json uit promise halen. array updaten.
-    window.fetch("data/cards.json")
+    window.fetch("data/getgames.php")
         .then(res => res.json())
         .then(res => {
             this.initCards(res);
